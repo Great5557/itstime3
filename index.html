@@ -1,0 +1,463 @@
+<!DOCTYPE html><!--сообщает сайту что это html 5-->
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вкладище</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Comfortaa&family=Dancing+Script&family=Patrick+Hand&family=Playfair+Display:wght@500&family=Roboto+Slab:wght@300&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center; /*центрилизует по горизонтали*/
+            align-items: center; /*центрилизует по вертикали, но нужно задать высоту которую видит браузер*/
+            height: 100vh;/*задаёт высоту которую видит браузер*/ 
+            background-color: antiquewhite;
+            transition: all 1.25s;
+            }
+
+        .BigDivs {
+            transition: all 0.05s;
+        }
+        
+        div {
+            text-align: center;
+            }
+
+        button {
+        
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: transparent; /*делает фон кнопки прозрачной*/
+            cursor: pointer;
+            outline: none;
+            margin: 5px;
+            }    
+
+        .whiteLine {
+            font-family: 'Roboto Slab', serif;
+            font-weight: bold;
+        }
+
+        /*#green2>button { border: 2px solid Aquamarine;
+
+        }*/
+
+        h1, h3{
+            font-family: 'Roboto Slab', serif;
+            animation: down 2s;
+        }
+
+        @keyframes down {
+            from {
+                transform: translateY(-50px);
+
+            }
+
+            to {
+                transform: translateY(0px);
+            }
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="BigDivs">
+        <h3>Привет, Катя!</h3>
+        <h1>Сейчас 12:12:12</h1>
+        <div id = "green2">
+            <button class="whiteLine" id="q1">Зелёный фон</button>
+        </div>
+        <div id = "white2">
+            <button class="whiteLine" id="q2">Белый фон</button>
+        </div>
+        <div  id = "black2">
+            <button id="q3" class = "whiteLine" >Чёрный фон</button>
+        </div>
+        <div id = "blue2">     
+            <button class="whiteLine" id="q4" >Голубой фон</button>
+        </div>
+        <div id = "red2">
+            <button id="q5" class="whiteLine">Светло красный фон</button>
+        </div>
+        <div id = "yellow2">
+            <button id="q6" class="whiteLine">Желтый фон</button>
+        </div>
+        <div id = "grey2">
+            <button id="q7" class = "whiteLine">Серый фон</button>
+        </div>
+    
+    </div>
+
+    <script>
+
+        const tii = prompt ('Как именовать Вас?')
+        document.querySelector('h3').textContent = 'Привет, ' + tii + '!'
+        document.querySelector('h1').textContent = 'Сейчас ' + new Date().toLocaleTimeString()
+        setInterval(function() {
+            document.querySelector('h1').textContent = 'Сейчас ' + new Date().toLocaleTimeString()
+        }, 1000)
+
+
+
+       
+
+        document.getElementById('green2').onclick  = function () {
+            document.body.style.background = 'SpringGreen'
+            document.body.style.color = 'Black'
+
+            document.getElementById('q1').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q2').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q3').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q4').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q5').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q6').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q7').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+
+            /*
+            document.getElementsByClassName('whiteLine')[0].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[1].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[2].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[3].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[4].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[5].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[6].style.color = "Black";
+        
+            document.getElementsByClassName('whiteLine')[0].style = "border: 2px solid Black"*/
+        }
+
+        document.getElementById('white2').onclick  = function () {
+            document.body.style.background = 'Snow'
+            document.body.style.color = 'Black'
+            
+
+            document.getElementById('q1').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q2').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q3').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q4').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q5').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q6').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q7').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            /*
+            document.getElementsByClassName('whiteLine')[0].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[1].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[2].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[3].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[4].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[5].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[6].style.color = "Black";*/
+            
+            
+
+        }
+
+        document.getElementById('black2').onclick  = function () {
+         
+            document.body.style.background = 'Black'
+            document.body.style.color = 'White'
+
+            document.getElementById('q1').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q2').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q3').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q4').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q5').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q6').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q7').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+
+            /*document.getElementsByClassName('whiteLine')[0].style = "border: 2px solid White"*/
+        
+
+        }
+
+        document.getElementById('blue2').onclick  = function () {
+            document.body.style.background = 'Aqua'
+            document.body.style.color = 'Black'
+
+            document.getElementById('q1').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q2').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q3').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q4').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q5').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q6').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q7').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+           
+           /* document.getElementsByClassName('whiteLine')[0].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[1].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[2].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[3].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[4].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[5].style.color = "Black";
+            document.getElementsByClassName('whiteLine')[6].style.color = "Black";*/
+        }
+
+        document.getElementById('red2').onclick  = function () {
+            document.body.style.background = 'Tomato'
+            document.body.style.color = 'White'
+            document.getElementById('q1').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q2').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q3').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q4').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q5').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q6').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q7').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            
+        }
+
+        document.getElementById('yellow2').onclick  = function () {
+            document.body.style.background = 'Yellow'
+            document.body.style.color = 'Black'
+
+            document.getElementById('q1').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q2').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q3').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q4').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q5').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q6').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            document.getElementById('q7').style.cssText=`
+            border: 1px solid black;
+            color: black;
+            transition: all 1.25s;
+            `
+            
+        }
+
+        document.getElementById('grey2').onclick  = function () {
+            document.body.style.background = 'SlateGray'
+            document.body.style.color = 'White'
+            document.getElementById('q1').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q2').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q3').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q4').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q5').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+            document.getElementById('q6').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+            document.getElementById('q7').style.cssText=`
+            border: 1px solid white;
+            color: white;
+            transition: all 1.25s;
+            `
+
+        }
+
+    </script>
+
+
+</body>
+</html>
